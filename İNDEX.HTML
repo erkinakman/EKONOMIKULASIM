@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampüsümde Eko-Ulaşım: Bisiklet ve Scooter Paylaşım Sistemi</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .eco-gradient {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #11998e;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 1.2rem;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: #e5e7eb;
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        .benefit-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        .stats-counter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #11998e;
+        }
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #11998e, transparent);
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="mb-4">
+                    <i class="fas fa-leaf text-5xl text-green-300 mb-4"></i>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    Kampüsümde Eko-Ulaşım
+                </h1>
+                <p class="text-xl md:text-2xl mb-6 opacity-90">
+                    Bisiklet ve Scooter Paylaşım Sistemi
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base">
+                    <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">
+                        <i class="fas fa-users mr-2"></i>Teknolojik Çocuklar
+                    </span>
+                    <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">
+                        <i class="fas fa-trophy mr-2"></i>Uluslararası Çocuk Bilim Yarışması
+                    </span>
+                    <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full">
+                        <i class="fas fa-id-card mr-2"></i>Başvuru ID: 634373
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Proje Özeti -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        Proje Özeti
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Sürdürülebilir kampüs ulaşımı için çevre dostu çözüm
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl card-shadow">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="icon-circle bg-green-100 text-green-600 mb-6">
+                                <i class="fas fa-bicycle text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Proje Amacı</h3>
+                            <p class="text-gray-600 mb-4">
+                                Üniversite kampüslerinde fosil yakıtlı ring servislerinin yerine bisiklet ve güneş enerjili scooter paylaşım sistemi kurarak çevre dostu, ekonomik ve pratik ulaşım alternatifleri sunmayı hedeflemektedir.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Çevre Dostu</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Ekonomik</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Sürdürülebilir</span>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white p-6 rounded-lg text-center">
+                                <i class="fas fa-leaf text-3xl text-green-500 mb-3"></i>
+                                <h4 class="font-semibold text-gray-800">Karbon Azaltma</h4>
+                                <p class="text-sm text-gray-600 mt-2">Fosil yakıt kullanımını minimize ederek karbon ayak izini azaltma</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg text-center">
+                                <i class="fas fa-heart text-3xl text-red-500 mb-3"></i>
+                                <h4 class="font-semibold text-gray-800">Sağlıklı Yaşam</h4>
+                                <p class="text-sm text-gray-600 mt-2">Aktif ulaşım ile sağlıklı yaşam tarzını destekleme</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg text-center">
+                                <i class="fas fa-coins text-3xl text-yellow-500 mb-3"></i>
+                                <h4 class="font-semibold text-gray-800">Maliyet Düşürme</h4>
+                                <p class="text-sm text-gray-600 mt-2">İşletme maliyetlerini önemli ölçüde azaltma</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg text-center">
+                                <i class="fas fa-mobile-alt text-3xl text-blue-500 mb-3"></i>
+                                <h4 class="font-semibold text-gray-800">Akıllı Sistem</h4>
+                                <p class="text-sm text-gray-600 mt-2">Mobil uygulama ve GPS ile modern çözüm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anahtar Kelimeler -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Anahtar Kelimeler</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full">Eko-Ulaşım</span>
+                    <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Bisiklet Paylaşım Sistemi</span>
+                    <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Scooter Paylaşım Sistemi</span>
+                    <span class="bg-teal-100 text-teal-800 px-4 py-2 rounded-full">Sürdürülebilirlik</span>
+                    <span class="bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full">Çevre Dostu</span>
+                    <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full">Karbon Ayak İzi</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Akıllı Şehirler</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem ve Çözüm -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        Problem ve Çözüm
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Mevcut ulaşım problemlerini çevre dostu çözümlerle aşıyoruz
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Problem -->
+                    <div class="bg-red-50 p-8 rounded-xl card-shadow">
+                        <div class="icon-circle bg-red-100 text-red-600">
+                            <i class="fas fa-exclamation-triangle text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Mevcut Problemler</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-smog text-red-500 mr-3 mt-1"></i>
+                                <span>Fosil yakıtlı ring servislerinin çevreye zararlı karbon ayak izi</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-dollar-sign text-red-500 mr-3 mt-1"></i>
+                                <span>Yüksek işletme maliyetleri ve öğrencilere yansıyan dolaylı masraflar</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-traffic-light text-red-500 mr-3 mt-1"></i>
+                                <span>Kampüs içi trafik sıkışıklığı ve bekleme süreleri</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-clock text-red-500 mr-3 mt-1"></i>
+                                <span>Zamana bağlı servis saatleri ve esneklik eksikliği</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Çözüm -->
+                    <div class="bg-green-50 p-8 rounded-xl card-shadow">
+                        <div class="icon-circle bg-green-100 text-green-600">
+                            <i class="fas fa-lightbulb text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Çözüm Önerimiz</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-bicycle text-green-500 mr-3 mt-1"></i>
+                                <span>Bisiklet ve güneş enerjili scooter paylaşım sistemi</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-mobile-alt text-green-500 mr-3 mt-1"></i>
+                                <span>Mobil uygulama ve öğrenci kartı ile kolay erişim</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-gift text-green-500 mr-3 mt-1"></i>
+                                <span>Ücretsiz kullanım ve ödüllendirme sistemi</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-green-500 mr-3 mt-1"></i>
+                                <span>GPS takip ve güvenlik sistemleri ile güvenli kullanım</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teknik Detaylar -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        Teknik Detaylar
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Gelişmiş teknoloji ile desteklenen akıllı ulaşım sistemi
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl card-shadow benefit-card">
+                        <div class="icon-circle bg-blue-100 text-blue-600">
+                            <i class="fas fa-map-marker-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">İstasyon Sistemi</h3>
+                        <p class="text-gray-600 mb-4">
+                            Kampüsün stratejik noktalarına kurulan akıllı istasyonlar ile kolay erişim ve bırakma imkanı
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Akıllı kilit sistemi</li>
+                            <li>• Otomatik tanımlama</li>
+                            <li>• Güvenli park alanları</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl card-shadow benefit-card">
+                        <div class="icon-circle bg-green-100 text-green-600">
+                            <i class="fas fa-solar-panel text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Güneş Enerjisi</h3>
+                        <p class="text-gray-600 mb-4">
+                            Elektrikli scooterlar güneş enerjisi ile şarj edilerek %100 yenilenebilir enerji kullanımı
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Güneş paneli şarj ünitesi</li>
+                            <li>• Çevre dostu enerji</li>
+                            <li>• Sürdürülebilir sistem</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl card-shadow benefit-card">
+                        <div class="icon-circle bg-purple-100 text-purple-600">
+                            <i class="fas fa-satellite text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">GPS Takip</h3>
+                        <p class="text-gray-600 mb-4">
+                            Gerçek zamanlı konum takibi ve güvenlik sistemi ile araç güvenliğini sağlama
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Anlık konum bilgisi</li>
+                            <li>• Güvenlik alarmları</li>
+                            <li>• Kullanım analizi</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl card-shadow benefit-card">
+                        <div class="icon-circle bg-teal-100 text-teal-600">
+                            <i class="fas fa-mobile-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Mobil Uygulama</h3>
+                        <p class="text-gray-600 mb-4">
+                            Kullanıcı dostu mobil uygulama ile kolay rezervasyon, kullanım ve ödeme sistemi
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Araç rezervasyonu</li>
+                            <li>• Kullanım geçmişi</li>
+                            <li>• Puan sistemi</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl card-shadow benefit-card">
+                        <div class="icon-circle bg-orange-100 text-orange-600">
+                            <i class="fas fa-credit-card text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Öğrenci Kartı</h3>
+                        <p class="text-gray-600 mb-4">
+                            Mevcut öğrenci kartları ile sistem entegrasyonu sayesinde ek kart gerekmez
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Mevcut kart kullanımı</li>
+                            <li>• Hızlı erişim</li>
+                            <li>• Kimlik doğrulama</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl card-shadow benefit-card">
+                        <div class="icon-circle bg-pink-100 text-pink-600">
+                            <i class="fas fa-trophy text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Ödül Sistemi</h3>
+                        <p class="text-gray-600 mb-4">
+                            Kullanım sıklığına göre puan toplama ve ödüllerle teşvik sistemi
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-1">
+                            <li>• Kullanım puanları</li>
+                            <li>• Çeşitli ödüller</li>
+                            <li>• Motivasyon sistemi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proje Takımı -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        Proje Takımı
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Teknolojik Çocuklar - Deneyimli ve çok disiplinli takım
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl card-shadow">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Takım Bilgileri</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-users text-blue-500 mr-3"></i>
+                                    <span><strong>Takım Adı:</strong> Teknolojik Çocuklar</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-id-badge text-blue-500 mr-3"></i>
+                                    <span><strong>Takım ID:</strong> 3440641</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-trophy text-blue-500 mr-3"></i>
+                                    <span><strong>Yarışma:</strong> Uluslararası Çocuk Bilim Yarışması</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-graduation-cap text-blue-500 mr-3"></i>
+                                    <span><strong>Eğitim Seviyeleri:</strong> İlkokul - Doktora</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Görev Dağılımı</h3>
+                            <div class="space-y-3">
+                                <div class="bg-white p-4 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-chart-line text-green-500 mr-3"></i>
+                                        <span>Planlama ve Analiz</span>
+                                    </div>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-file-alt text-blue-500 mr-3"></i>
+                                        <span>Rapor Düzenleme</span>
+                                    </div>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-cogs text-purple-500 mr-3"></i>
+                                        <span>Sistem Kurulumu</span>
+                                    </div>
+                                </div>
+                                <div class="bg-white p-4 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-handshake text-orange-500 mr-3"></i>
+                                        <span>İşbirliği Organizasyonu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Uygulama Süreci -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        Uygulama Süreci
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Şubat - Haziran arası detaylı iş ve zaman çizelgesi
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl card-shadow">
+                    <div class="space-y-6">
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">1. İhtiyaç Analizi</h3>
+                            <p class="text-gray-600 mb-2">Kampüs içi ulaşım ihtiyaçlarının ve taleplerinin detaylı analizi</p>
+                            <span class="text-sm text-blue-600 font-medium">Şubat 2024</span>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">2. Lokasyon Belirleme</h3>
+                            <p class="text-gray-600 mb-2">Uygun istasyon alanlarının belirlenmesi ve izin süreçleri</p>
+                            <span class="text-sm text-blue-600 font-medium">Mart 2024</span>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">3. Tedarik ve Kurulum</h3>
+                            <p class="text-gray-600 mb-2">Bisiklet ve scooter tedariki, istasyon kurulumu</p>
+                            <span class="text-sm text-blue-600 font-medium">Nisan 2024</span>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">4. Sistem Geliştirme</h3>
+                            <p class="text-gray-600 mb-2">Mobil uygulama ve otomasyon sisteminin geliştirilmesi</p>
+                            <span class="text-sm text-blue-600 font-medium">Mayıs 2024</span>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">5. Test ve Lansman</h3>
+                            <p class="text-gray-600 mb-2">Pilot test, geri bildirim toplama ve resmi lansman</p>
+                            <span class="text-sm text-blue-600 font-medium">Haziran 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beklenen Sonuçlar -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        Beklenen Sonuçlar
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Çevre, sağlık ve ekonomi üzerinde pozitif etkiler
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-green-50 p-6 rounded-xl card-shadow text-center benefit-card">
+                        <i class="fas fa-leaf text-4xl text-green-500 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Çevre Dostu</h3>
+                        <p class="text-gray-600">Karbon salınımında önemli azalma ve sürdürülebilir ulaşım</p>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-6 rounded-xl card-shadow text-center benefit-card">
+                        <i class="fas fa-heart text-4xl text-red-500 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sağlıklı Yaşam</h3>
+                        <p class="text-gray-600">Aktif yaşam tarzı ile fiziksel aktivite artışı</p>
+                    </div>
+                    
+                    <div class="bg-yellow-50 p-6 rounded-xl card-shadow text-center benefit-card">
+                        <i class="fas fa-chart-line text-4xl text-yellow-500 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Maliyet Tasarrufu</h3>
+                        <p class="text-gray-600">İşletme maliyetlerinde %60'a varan azalma</p>
+                    </div>
+                    
+                    <div class="bg-purple-50 p-6 rounded-xl card-shadow text-center benefit-card">
+                        <i class="fas fa-university text-4xl text-purple-500 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Kampüs İmajı</h3>
+                        <p class="text-gray-600">Çevreci ve teknolojik imaj güçlendirmesi</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl card-shadow">
+                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                        <div>
+                            <div class="stats-counter">%70</div>
+                            <p class="text-gray-600 font-medium">Karbon Salınımı Azalması</p>
+                        </div>
+                        <div>
+                            <div class="stats-counter">%60</div>
+                            <p class="text-gray-600 font-medium">Maliyet Tasarrufu</p>
+                        </div>
+                        <div>
+                            <div class="stats-counter">%80</div>
+                            <p class="text-gray-600 font-medium">Kullanıcı Memnuniyeti</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sürdürülebilirlik -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        Sürdürülebilirlik ve Yaygınlaştırma
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Projenin uzun vadeli etkileri ve genişleme potansiyeli
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl card-shadow">
+                        <div class="icon-circle bg-green-100 text-green-600">
+                            <i class="fas fa-recycle text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Sürdürülebilir Model</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                                <span>Güneş enerjisi ile %100 yenilenebilir enerji kullanımı</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                                <span>Düzenli bakım ve güncelleme planı</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                                <span>Kullanıcı geri bildirim sistemi</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
+                                <span>Sürekli iyileştirme ve gelişim</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl card-shadow">
+                        <div class="icon-circle bg-blue-100 text-blue-600">
+                            <i class="fas fa-globe text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Yaygınlaştırma</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-500 mr-3 mt-1"></i>
+                                <span>Diğer üniversite kampüslerine model olma</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-500 mr-3 mt-1"></i>
+                                <span>Şehir merkezlerine uyarlama imkanı</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-500 mr-3 mt-1"></i>
+                                <span>Uluslararası işbirliği fırsatları</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-500 mr-3 mt-1"></i>
+                                <span>Teknoloji transferi ve paylaşımı</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kaynaklar -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        Kaynaklar ve Referanslar
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Projenin bilimsel alt yapısını oluşturan kaynaklar
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl card-shadow">
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-book text-blue-500 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-medium text-gray-800">Bıyık, Y., & Civelekoğlu, G. (2018)</p>
+                                <p class="text-gray-600">Ulaşım sektöründen kaynaklı karbon ayak izi değişiminin incelenmesi</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-book text-blue-500 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-medium text-gray-800">ETİ. (2017)</p>
+                                <p class="text-gray-600">Üniversitede bisikletli ulaşım</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-book text-blue-500 mr-3 mt-1"></i>
+                            <div>
+                                <p class="font-medium text-gray-800">Kılıç, E., & Önler, E. (2022)</p>
+                                <p class="text-gray-600">Tekirdağ ili Çorlu ilçesinde toplu taşıma kaynaklı karbon ayak izinin hesaplanması üzerine bir araştırma</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="eco-gradient text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="mb-6">
+                    <i class="fas fa-leaf text-4xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Kampüsümde Eko-Ulaşım</h3>
+                    <p class="text-green-100">Sürdürülebilir geleceğin bugünden inşası</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                    <div>
+                        <h4 class="font-semibold mb-2">Proje Detayları</h4>
+                        <p class="text-green-100 text-sm">Teknolojik Çocuklar takımı tarafından geliştirilen çevre dostu ulaşım projesi</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Yarışma</h4>
+                        <p class="text-green-100 text-sm">Uluslararası Çocuk Bilim Yarışması</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Vizyon</h4>
+                        <p class="text-green-100 text-sm">Temiz, sağlıklı ve sürdürülebilir kampüs ulaşımı</p>
+                    </div>
+                </div>
+                
+                <div class="section-divider bg-white opacity-20"></div>
+                
+                <div class="flex flex-wrap justify-center gap-4 text-sm">
+                    <span class="flex items-center">
+                        <i class="fas fa-id-card mr-2"></i>
+                        Başvuru ID: 634373
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-users mr-2"></i>
+                        Takım ID: 3440641
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-calendar mr-2"></i>
+                        2024
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
